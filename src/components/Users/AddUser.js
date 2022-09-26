@@ -17,9 +17,9 @@ const [enteredAge, setEnteredAge] = useState('');
         if(+enteredAge < 1) {
             return;
         }
-        console.log(enteredUsername, enteredAge);
+        props.onAddUser(enteredUsername, enteredAge);
         setEnteredUsername('');
-        setEnteredAge('');
+        setEnteredAge(''); 
     }
 const usernameChangeHandler = e => {
     setEnteredUsername(e.target.value)
